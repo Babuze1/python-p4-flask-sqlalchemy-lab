@@ -45,6 +45,6 @@ with app.app_context():
         a.enclosure = rc(enclosures)
         animals.append(a)
 
-    db.session.add_all(animals)
-    db.session.commit()
-
+enclosure = Enclosure(environment="grass", open_to_visitors=True)
+db.session.add(enclosure)
+db.session.commit()
